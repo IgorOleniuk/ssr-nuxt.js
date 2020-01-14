@@ -12,8 +12,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   head () {
     return {
@@ -26,7 +24,6 @@ export default {
       .then((response) => {
         const names = response.data
         return { names }
-        response.json()
       })
   }
 }
