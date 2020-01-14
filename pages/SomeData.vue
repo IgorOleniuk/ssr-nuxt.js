@@ -27,9 +27,6 @@ export default {
         const names = response.data
         return { names }
       })
-      .catch((err) => {
-        console.log(err)
-      })
   }
 }
 </script>

@@ -1,28 +1,39 @@
 <template>
   <header class="header">
-    <h1
-      class="title"
-    >
-      Project with Async Data
-    </h1>
-    <ul>
-      <li
-        v-if="'/'"
+      <h1
+          class="title"
       >
-        <nuxt-link
-          to="/"
+        <a
+            href="/"
         >
-          Home
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link
-          to="/somedata"
+          Async Data
+        </a>
+      </h1>
+      <ul>
+        <li
+            v-if="'/'"
         >
-          Some Data
-        </nuxt-link>
-      </li>
-    </ul>
+          <nuxt-link
+              to="/"
+          >
+            Home
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link
+              to="/somedata"
+          >
+            Some Data
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link
+              to="/about"
+          >
+            About
+          </nuxt-link>
+        </li>
+      </ul>
   </header>
 </template>
 
@@ -37,24 +48,28 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dotted #ccc;
+    margin: 1rem;
+    border-bottom: 2px solid #ccc;
   }
 
   .header .title {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #526488;
+  }
+
+  .header .title a {
+    color: #526488;
+    text-decoration: none;
+    font-weight: normal;
   }
 
   .header ul {
     display: flex;
   }
 
-  .header a {
+  .header li a {
     display: inline-block;
-    background: #333;
-    color: #fff;
+    color: #526488;
     padding: 0.3rem 1rem;
     margin-right: 0.5rem;
   }

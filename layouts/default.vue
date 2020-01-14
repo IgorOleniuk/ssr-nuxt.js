@@ -28,6 +28,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background: whitesmoke;
+}
+
 *,
 *:before,
 *:after {
