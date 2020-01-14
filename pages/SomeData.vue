@@ -1,11 +1,8 @@
 <template>
   <div class="container">
     <ul>
-      <li
-        v-for="name in names"
-        :key="name.id"
-      >
-        {{ name.name }}
+      <li>
+        {{ post.title }}
       </li>
     </ul>
   </div>
@@ -23,7 +20,11 @@ export default {
   asyncData () {
     return fetch('https://jsonplaceholder.typicode.com/posts/1')
       .then(response => response.json())
-      .then(json => console.log(json))
+      .then((json) => {
+        const post = json
+        console.log(json)
+        return { post }
+      })
   }
 }
 </script>
