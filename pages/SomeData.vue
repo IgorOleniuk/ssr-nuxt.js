@@ -1,13 +1,16 @@
 <template>
   <div class="content">
-    <ul>
-      <li
-        v-for="post in posts"
-        :key="post.id"
-      >
+    <div
+      v-for="post in posts"
+      :key="post.id"
+    >
+      <h4>
         {{ post.title }}
-      </li>
-    </ul>
+      </h4>
+      <p>
+        {{ post.body }}
+      </p>
+    </div>
   </div>
 </template>
 
