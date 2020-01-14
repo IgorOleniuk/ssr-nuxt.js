@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
   head () {
@@ -22,10 +21,9 @@ export default {
   },
 
   asyncData () {
-    return fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => {
-        response.json()
-      }).then(json => console.log(json))
+    return fetch('https://jsonplaceholder.typicode.com/posts/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
   }
 }
 </script>
