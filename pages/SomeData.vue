@@ -22,10 +22,11 @@ export default {
   },
 
   asyncData () {
-    return axios.get('https://jsonplaceholder.typicode.com/posts')
+    return fetch('https://jsonplaceholder.typicode.com/posts')
       .then((response) => {
         const names = response.data
         return { names }
+        response.json()
       })
   }
 }
