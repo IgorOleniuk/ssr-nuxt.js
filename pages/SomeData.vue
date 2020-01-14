@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
-    <ul
-      v-for="post in posts"
-      :key="post.id"
-    >
-      <li>
+  <div class="content">
+    <ul>
+      <li
+        v-for="post in posts"
+        :key="post.id"
+      >
         {{ post.title }}
       </li>
     </ul>
@@ -31,3 +31,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .content {
+    width: 80%;
+  }
+</style>
