@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   head () {
     return {
@@ -20,7 +22,7 @@ export default {
   },
 
   asyncData () {
-    return fetch('https://jsonplaceholder.typicode.com/posts')
+    return axios.get('https://jsonplaceholder.typicode.com/posts')
       .then((response) => {
         const names = response.data
         return { names }
