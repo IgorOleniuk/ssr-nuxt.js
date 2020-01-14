@@ -22,9 +22,11 @@ export default {
   },
 
   asyncData () {
-    return fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(response => response.json())
-      .then(json => console.log(json))
+    return axios.get('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => {
+        const names = response.json
+        return { names }
+      })
   }
 }
 </script>
