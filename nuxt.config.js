@@ -9,7 +9,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }б
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       { name:"yandex-verification", content:"887e3362bb5e4061"}
     ],
     link: [
