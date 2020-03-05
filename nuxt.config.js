@@ -47,11 +47,11 @@ export default {
     // Doc: https://pwa.nuxtjs.org/
     '@nuxtjs/pwa',
 
-    '@nuxtjs/yandex-metrika',
-      {
-        id: '59380747',
-        webvisor: true,
-      },
+    ['@nuxtjs/yandex-metrika', {
+      id: '59380747',
+      webvisor: true, },
+    ],
+
   ],
   /*
   ** Axios module configuration
