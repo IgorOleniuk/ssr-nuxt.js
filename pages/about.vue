@@ -30,6 +30,14 @@
           <img src="/images/img2.jpeg">
         </div>
       </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="/images/homeicon.jpeg">
+        </div>
+        <div class="col-sm-6">
+          <img src="/images/img2.jpeg">
+        </div>
+      </div>
     </div>
     <div
       class="join">

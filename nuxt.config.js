@@ -43,13 +43,43 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // Doc: https://pwa.nuxtjs.org/
+    '@nuxtjs/pwa',
+
+    '@nuxtjs/yandex-metrika',
+      {
+        id: '59380747',
+        webvisor: true,
+      },
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+
+  pwa: {
+    workbox: {
+      cacheNames: {
+        prefix: 'Test'
+      },
+      strategyOptions: {
+        cacheName: 'our-cache',
+        cacheExpiration: {
+          maxEntries: 10,
+          maxAgeSeconds: 300
+        }
+      },
+      config: {
+        debug: true
+      },
+      dev: true,
+      workboxOptions: {
+        swSrc: 'sw.js',
+      },
+    }
   },
   /*
   ** Build configuration
